@@ -7,7 +7,8 @@
     "build": "tsc --build --clean && tsc",
     "prepublishOnly": "npm run build && npm run docs",
     "test": "npm run build && node dist/__tests__/runner",
-    "docs": "typedoc ./src"
+    "docs": "typedoc ./src",
+    "release": "npx commit-and-tag-version --release-as"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
   "description": "",
   "devDependencies": {
     "@types/node": "^22.13.2",
+    "commit-and-tag-version": "^12.5.0",
     "typedoc": "^0.27.7",
     "typescript": "^5.7.3"
   }
